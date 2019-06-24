@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Software License Agreement (BSD License)
  *
  *  Copyright (c) 2010-2012, Willow Garage, Inc.
@@ -181,7 +181,7 @@ void PointCloudToLaserScanNodelet::cloudCb(const sensor_msgs::PointCloud2ConstPt
     try
     {
       cloud.reset(new sensor_msgs::PointCloud2);
-      tf2_->transform(*cloud_msg, *cloud, target_frame_, ros::Duration(tolerance_));
+      tf2_->transform(*cloud_msg, *cloud, target_frame_, ros::Duration(tolerance_));//转换到 target_frame_ 坐标
       cloud_out = cloud;
     }
     catch (tf2::TransformException& ex)
@@ -212,7 +212,7 @@ void PointCloudToLaserScanNodelet::cloudCb(const sensor_msgs::PointCloud2ConstPt
       continue;
     }
 
-    double range = hypot(*iter_x, *iter_y);
+    double range = hypot(*iter_x, *iter_y);//计算直角三角形的斜边长
     if (range < range_min_)
     {
       NODELET_DEBUG("rejected for range %f below minimum value %f. Point: (%f, %f, %f)", range, range_min_, *iter_x,

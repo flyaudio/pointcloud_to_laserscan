@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Software License Agreement (BSD License)
  *
  *  Copyright (c) 2010-2012, Willow Garage, Inc.
@@ -49,7 +49,7 @@
 #include <string>
 #include <tf2_ros/buffer.h>
 #include <tf2_ros/message_filter.h>
-#include <tf2_ros/transform_listener.h>
+#include <tf2_ros/transform_listener.h>// To use the TransformListener, we need to include the tf2/transform_listener.h header file
 
 namespace pointcloud_to_laserscan
 {
