@@ -244,4 +244,5 @@ void PointCloudToLaserScanNodelet::cloudCb(const sensor_msgs::PointCloud2ConstPt
 }
 }  // namespace pointcloud_to_laserscan
 
-PLUGINLIB_EXPORT_CLASS(pointcloud_to_laserscan::PointCloudToLaserScanNodelet, nodelet::Nodelet)
+//Declare the PointCloudToLaserScanNodelet as a Nodelet class
+PLUGINLIB_EXPORT_CLASS(pointcloud_to_laserscan::PointCloudToLaserScanNodelet, nodelet::Nodelet)//插件
